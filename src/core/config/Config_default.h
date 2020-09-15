@@ -1,0 +1,122 @@
+/* evildragon
+ * Copyright 2010      Jeff Garzik <jgarzik@pobox.com>
+ * Copyright 2012-2014 pooler      <pooler@litecoinpool.org>
+ * Copyright 2014      Lucas Jones <https://github.com/lucasjones>
+ * Copyright 2014-2016 Wolf9466    <https://github.com/OhGodAPet>
+ * Copyright 2016      Jay D Dee   <jayddee246@gmail.com>
+ * Copyright 2017-2018 XMR-Stak    <https://github.com/fireice-uk>, <https://github.com/psychocrypt>
+ * Copyright 2018-2019 SChernykh   <https://github.com/SChernykh>
+ * Copyright 2016-2019 evildragon       <https://github.com/evildragon>, <support@evildragon.com>
+ *
+ *   This program is free software: you can redistribute it and/or modify
+ *   it under the terms of the GNU General Public License as published by
+ *   the Free Software Foundation, either version 3 of the License, or
+ *   (at your option) any later version.
+ *
+ *   This program is distributed in the hope that it will be useful,
+ *   but WITHOUT ANY WARRANTY; without even the implied warranty of
+ *   MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+ *   GNU General Public License for more details.
+ *
+ *   You should have received a copy of the GNU General Public License
+ *   along with this program. If not, see <http://www.gnu.org/licenses/>.
+ */
+
+#ifndef evildragon_CONFIG_DEFAULT_H
+#define evildragon_CONFIG_DEFAULT_H
+
+
+namespace evildragon {
+
+
+#ifdef evildragon_FEATURE_EMBEDDED_CONFIG
+const static char *default_config =
+R"===(
+{
+    "api": {
+        "id": null,
+        "worker-id": null
+    },
+    "http": {
+        "enabled": false,
+        "host": "127.0.0.1",
+        "port": 0,
+        "access-token": null,
+        "restricted": true
+    },
+    "autosave": true,
+    "version": 1,
+    "background": false,
+    "colors": true,
+    "randomx": {
+        "init": -1,
+        "mode": "auto",
+        "numa": true
+    },
+    "cpu": {
+        "enabled": true,
+        "huge-pages": true,
+        "hw-aes": null,
+        "priority": null,
+        "memory-pool": false,
+        "yield": true,
+        "max-threads-hint": 100,
+        "asm": true,
+        "argon2-impl": null,
+        "astrobwt-max-size": 550,
+        "cn/0": false,
+        "cn-lite/0": false,
+        "kawpow": false
+    },
+    "opencl": {
+        "enabled": false,
+        "cache": true,
+        "loader": null,
+        "platform": "AMD",
+        "cn/0": false,
+        "cn-lite/0": false
+    },
+    "cuda": {
+        "enabled": false,
+        "loader": null,
+        "nvml": true,
+        "cn/0": false,
+        "cn-lite/0": false
+    },
+    "donate-level": 5,
+    "donate-over-proxy": 1,
+    "log-file": null,
+    "pools": [
+        {
+            "algo": null,
+            "coin": null,
+            "url": "donate.v2.evildragon.com:3333",
+            "user": "YOUR_WALLET_ADDRESS",
+            "pass": "x",
+            "rig-id": null,
+            "nicehash": false,
+            "keepalive": false,
+            "enabled": true,
+            "tls": false,
+            "tls-fingerprint": null,
+            "daemon": false,
+            "self-select": null
+        }
+    ],
+    "print-time": 60,
+    "health-print-time": 60,
+    "retries": 5,
+    "retry-pause": 5,
+    "syslog": false,
+    "user-agent": null,
+    "watch": true,
+    "pause-on-battery": false
+}
+)===";
+#endif
+
+
+} // namespace evildragon
+
+
+#endif /* evildragon_CONFIG_DEFAULT_H */

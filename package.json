@@ -1,0 +1,23 @@
+{
+  "name": "evildragon",
+  "version": "3.0.0",
+  "description": "RandomX, CryptoNight and Argon2 miner",
+  "main": "index.js",
+  "directories": {
+    "doc": "doc"
+  },
+  "scripts": {
+    "build": "node scripts/generate_cl.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/evildragon/evildragon.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "GPLv3",
+  "bugs": {
+    "url": "https://github.com/evildragon/evildragon/issues"
+  },
+  "homepage": "https://github.com/evildragon/evildragon#readme"
+}
